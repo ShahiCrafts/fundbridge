@@ -6,7 +6,7 @@ const mongoSanitize = require("express-mongo-sanitize");
 const rateLimit = require("express-rate-limit");
 const morgan = require("morgan");
 const cookieParser = require("cookie-parser");
-const connectDB = require("./src/config/db");
+const connectDB = require("./src/config/db.config");
 
 dotenv.config();
 
