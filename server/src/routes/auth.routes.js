@@ -16,15 +16,11 @@ router.post(
   validateRegister,
   authController.register
 );
-
 router.post("/login", authLimiter, validateLogin, authController.login);
-
 router.post("/logout", authController.logout);
 
 router.post("/mfa/setup", protect, authController.setupMfa);
-
 router.post("/mfa/verify", protect, authController.verifyMfaSetup);
-
 router.post("/mfa/validate", protect, authController.validateMfaLogin);
 
 module.exports = router;
